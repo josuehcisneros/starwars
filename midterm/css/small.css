@@ -1,0 +1,117 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+}
+
+/* Apply a natural box layout model to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* General styling for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+body.paintRed main h1, body.paintGreen main h1 {
+    color: white;
+}
+
+/* Button switcher styling */
+body.paintRed header #redImage { display: none; }
+body.paintRed header #greenImage { display: block; }
+
+body.paintGreen header #redImage { display: block; }
+body.paintGreen header #greenImage { display: none; }
+
+
+/* Grid layout for cards */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(16, 16, 16);
+}
+
+/* Styling for card layout when switching themes */
+body.paintGreen #cards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+body.paintRed #cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Basic card styling */
+#cards figure {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+#cards figure:hover {
+    transform: translateY(-5px);
+}
+
+/* Card image styling */
+#cards img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+/* Title styling */
+#cards p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Figcaption ) */
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    color: rgb(238, 227, 23);
+    
+}
+
+h1 {
+    h1 {
+        margin: 0;
+        font-size: 1.8rem; 
+        
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(233, 233, 233);
+    padding: 1rem;
+    font-size: 0.9rem;
+}
